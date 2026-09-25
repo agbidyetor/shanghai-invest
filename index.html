@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanghai Investment | Build your future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="landing" id="landingView">
+      <header class="landing-nav">
+        <div class="brand landing-brand">
+          <div class="brand-mark">S</div>
+          <span>Shanghai Investment</span>
+        </div>
+        <button class="text-button" data-auth="login">Log in</button>
+      </header>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Invest with intention</div>
+          <h1>Your money should have a point of view.</h1>
+          <p>
+            Build a portfolio that moves with your life. Shanghai Investment
+            brings thoughtful automation, clear advice, and long-term
+            perspective into one calm place.
+          </p>
+          <div class="hero-actions">
+            <button class="hero-cta" data-auth="signup">
+              Start investing <span>→</span></button
+            ><button class="ghost-button" data-auth="login">
+              I already have an account
+            </button>
+          </div>
+          <div class="trust-row">
+            <span><i data-lucide="shield-check"></i> Bank-level encryption</span
+            ><span><i data-lucide="badge-check"></i> Fiduciary-minded</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="art-label">Your north star <span>2038</span></div>
+          <div class="art-number">$250k</div>
+          <div class="art-caption">projected wealth</div>
+          <svg viewBox="0 0 520 230" preserveAspectRatio="none">
+            <path
+              d="M0 194 C55 190 62 174 105 180 S165 150 193 161 S237 135 269 144 S315 99 350 121 S389 84 420 98 S461 53 520 22"
+            />
+            <path
+              class="art-fill"
+              d="M0 194 C55 190 62 174 105 180 S165 150 193 161 S237 135 269 144 S315 99 350 121 S389 84 420 98 S461 53 520 22 V230H0Z"
+            />
+          </svg>
+          <div class="art-bottom">
+            <span>Today</span><span>+12.4% average</span>
+          </div>
+        </div>
+      </section>
+      <section class="landing-strip">
+        <div>
+          <b>One plan, many possibilities.</b
+          ><span>Simple enough for today. Built for the long view.</span>
+        </div>
+        <div class="strip-stat">
+          <strong>86%</strong
+          ><span>of clients feel more confident about their future</span>
+        </div>
+        <div class="strip-stat">
+          <strong>24/7</strong><span>automated monitoring and rebalancing</span>
+        </div>
+      </section>
+    </div>
+    <div class="auth-screen" id="authView">
+      <div class="auth-panel">
+        <button class="back-button" data-show="landing">
+          <span>←</span> Back
+        </button>
+        <div class="brand auth-brand">
+          <div class="brand-mark">S</div>
+          <span>Shanghai Investment</span>
+        </div>
+        <div class="eyebrow" id="authEyebrow">Welcome back</div>
+        <h1 id="authTitle">Log in to your account</h1>
+        <p id="authText">Your financial picture, all in one place.</p>
+        <form id="authForm">
+          <div class="name-fields" id="nameFields">
+            <label
+              >First name<input
+                type="text"
+                name="firstName"
+                autocomplete="given-name"
+                placeholder="Min" /></label
+            ><label
+              >Last name<input
+                type="text"
+                name="lastName"
+                autocomplete="family-name"
+                placeholder="Chen"
+            /></label>
+          </div>
+          <label
+            >Email address<input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required /></label
+          ><label id="passwordField"
+            >Password<input
+              type="password"
+              name="password"
+              minlength="8"
+              placeholder="At least 8 characters"
+              required /></label
+          ><label id="referralField"
+            >Referral code <span class="optional">(optional)</span
+            ><input type="text" name="referral" placeholder="SH1A2B3C" /></label
+          ><label class="code-field" id="codeField"
+            >Security code<input
+              name="verificationCode"
+              inputmode="numeric"
+              pattern="[0-9]{6}"
+              maxlength="6"
+              placeholder="6-digit code" /></label
+          ><input type="hidden" name="challengeToken" /><button
+            class="hero-cta"
+            type="submit"
+            id="authSubmit"
+          >
+            Log in <span>→</span>
+          </button>
+          <p class="auth-status" id="authStatus" role="alert"></p>
+        </form>
+        <div class="auth-links">
+          <button class="text-button" id="forgotPassword">
+            Forgot password?</button
+          ><button class="switch-auth" id="switchAuth">
+            New here? <b>Create an account</b>
+          </button>
+        </div>
+      </div>
+      <div class="auth-aside">
+        <div class="eyebrow">A clearer way forward</div>
+        <h2>Make a plan you can keep.</h2>
+        <p>
+          We turn your goals into a portfolio and keep it on course as life
+          changes.
+        </p>
+        <div class="aside-quote">
+          “The best investment plan is the one that lets you get on with your
+          life.”<small>Shanghai Investment principles</small>
+        </div>
+      </div>
+    </div>
+    <div class="onboarding" id="onboardingView">
+      <div class="onboarding-top">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <span>Shanghai Investment</span>
+        </div>
+        <span>Step <b id="stepNumber">1</b> of 3</span>
+      </div>
+      <div class="step-track"><div id="stepProgress"></div></div>
+      <div class="onboarding-card">
+        <div class="eyebrow">A little context</div>
+        <h1 id="onboardingTitle">What are you investing for?</h1>
+        <p id="onboardingText">
+          This helps us shape a plan around what matters to you.
+        </p>
+        <div class="choice-grid" id="choiceGrid">
+          <button data-choice="Retirement">
+            <i data-lucide="sunset"></i><b>Retirement</b
+            ><small>Build future freedom</small></button
+          ><button data-choice="Home">
+            <i data-lucide="house"></i><b>Buying a home</b
+            ><small>Prepare for a place of your own</small></button
+          ><button data-choice="Education">
+            <i data-lucide="graduation-cap"></i><b>Education</b
+            ><small>Invest in what's next</small></button
+          ><button data-choice="Wealth">
+            <i data-lucide="trending-up"></i><b>Wealth building</b
+            ><small>Grow your possibilities</small>
+          </button>
+        </div>
+        <button class="hero-cta next-step" id="nextStep">
+          Continue <span>→</span>
+        </button>
+      </div>
+    </div>
+    <div class="app" id="appView">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <span>Shanghai Investment</span>
+        </div>
+        <div class="nav-label">Workspace</div>
+        <nav>
+          <button class="nav-item active" data-view="dashboard">
+            <i data-lucide="layout-dashboard"></i><span>Overview</span>
+          </button>
+          <button class="nav-item" data-view="portfolios">
+            <i data-lucide="layers-3"></i><span>Portfolios</span>
+          </button>
+          <button class="nav-item" data-view="goals">
+            <i data-lucide="target"></i><span>Goals</span>
+          </button>
+          <button class="nav-item" data-view="automations">
+            <i data-lucide="repeat-2"></i><span>Automations</span>
+          </button>
+          <button class="nav-item" data-view="money">
+            <i data-lucide="arrow-down-to-line"></i><span>Move money</span>
+          </button>
+          <button class="nav-item" data-view="activity">
+            <i data-lucide="list-ordered"></i><span>Activity</span>
+          </button>
+          <button class="nav-item" data-view="learn">
+            <i data-lucide="book-open"></i><span>Learn</span>
+          </button>
+          <button class="nav-item" data-view="fees">
+            <i data-lucide="badge-dollar-sign"></i><span>Fees</span>
+          </button>
+          <button class="nav-item" data-view="profile">
+            <i data-lucide="user-round"></i><span>Profile</span>
+          </button>
+          <button class="nav-item" data-view="settings">
+            <i data-lucide="settings-2"></i><span>Settings</span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help">
+            <i data-lucide="circle-help"></i><span>Help center</span>
+          </div>
+          <div
+            class="profile"
+            role="button"
+            tabindex="0"
+            aria-label="Open profile"
+          >
+            <div class="avatar" id="sidebarProfileAvatar">MC</div>
+            <div><b id="sidebarProfileName">Min Chen</b><small>Personal account</small></div>
+            <i
+              data-lucide="chevron-down"
+              style="margin-left: auto; width: 14px"
+            ></i>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <header class="topbar">
+          <div class="crumb">Workspace / <strong>Overview</strong></div>
+          <div class="top-actions">
+            <form class="global-search" id="globalSearch" role="search">
+              <i data-lucide="search"></i
+              ><input
+                id="searchInput"
+                type="search"
+                placeholder="Search workspace"
+                aria-label="Search workspace"
+                autocomplete="off"
+              /><button
+                class="search-clear"
+                id="searchClear"
+                type="button"
+                aria-label="Clear search"
+              >
+                <i data-lucide="x"></i>
+              </button>
+              <div
+                class="search-results"
+                id="searchResults"
+                role="listbox"
+              ></div>
+            </form>
+            <span>Aug 22, 2026</span
+            ><button
+              class="icon-button notification-button"
+              aria-label="Notifications"
+              data-nav-target="activity"
+            >
+              <i data-lucide="bell"></i><b id="notificationCount">0</b></button
+            ><button class="icon-button" aria-label="Settings">
+              <i data-lucide="settings-2"></i>
+            </button><button
+              class="theme-toggle"
+              id="themeToggle"
+              type="button"
+              aria-pressed="false"
+            >
+              <i data-lucide="moon"></i><span>Dark mode</span>
+            </button>
+          </div>
+        </header>
+        <section class="content view-content" data-panel="dashboard">
+          <div class="welcome">
+            <div>
+              <div class="eyebrow">Saturday, August 22</div>
+              <h1>Good morning, Min.</h1>
+            </div>
+            <button class="card-action open-modal">+ Add money</button>
+          </div>
+          <div class="summary-grid">
+            <div class="card cash-card"><div class="label-row"><span>Available cash</span><i data-lucide="wallet" style="width:16px"></i></div><div class="cash-balance" id="availableCash">₦0.00</div><div class="cash-actions"><button class="card-action open-modal" data-transaction-type="deposit">+ Deposit</button><button class="outline-button open-modal" data-transaction-type="withdrawal">Withdraw</button></div></div>
+            <div class="card balance-card">
+              <div class="label-row">
+                <span>Total portfolio value</span
+                ><i data-lucide="more-horizontal" style="width: 16px"></i>
+              </div>
+                <div class="balance" id="portfolioBalance">$0.00</div>
+              <div class="change">+$0.00 (0.00%) this month</div>
+            </div>
+            <div class="card stat">
+              <div>
+                <div class="label-row">
+                  <span>Contributed</span
+                  ><i data-lucide="info" style="width: 14px"></i>
+                </div>
+                <div class="stat-value" id="contributedBalance">$0.00</div>
+              </div>
+              <div class="stat-foot">
+                <span>Since Jan 2022</span><span class="positive">+0.00%</span>
+              </div>
+            </div>
+            <div class="card stat">
+              <div>
+                <div class="label-row">
+                  <span>Next deposit</span
+                  ><i data-lucide="calendar-clock" style="width: 14px"></i>
+                </div>
+                <div class="stat-value">$0.00</div>
+              </div>
+              <div class="stat-foot">
+                <span>Not scheduled</span><span class="positive">Pending</span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-grid">
+            <div class="card chart-card">
+              <div class="section-head">
+                <h2>Portfolio performance</h2>
+                <button class="link-button" data-nav-target="portfolios">
+                  View details <span aria-hidden="true">→</span>
+                </button>
+              </div>
+              <div class="chart-meta">
+                <div class="chart-total">$86,240.18</div>
+                <div class="positive">+15.92% all time</div>
+                <div class="periods" style="margin-left: auto">
+                  <button class="period">1M</button
+                  ><button class="period">6M</button
+                  ><button class="period selected">1Y</button
+                  ><button class="period">ALL</button>
+                </div>
+              </div>
+              <svg
+                class="chart"
+                viewBox="0 0 650 174"
+                preserveAspectRatio="none"
+                aria-label="Portfolio growth chart"
+              >
+                <defs>
+                  <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#9bdabd" stop-opacity=".45" />
+                    <stop offset="1" stop-color="#9bdabd" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  class="chart-grid"
+                  d="M0 20H650M0 72H650M0 124H650M0 173H650"
+                />
+                <path
+                  class="chart-area"
+                  d="M0 142 C35 145 49 127 77 133 S118 119 146 125 S183 99 212 109 S254 89 282 97 S321 76 350 84 S390 66 414 77 S457 44 480 57 S510 38 535 46 S579 25 600 35 S625 14 650 20 V174H0Z"
+                />
+                <path
+                  class="chart-line"
+                  d="M0 142 C35 145 49 127 77 133 S118 119 146 125 S183 99 212 109 S254 89 282 97 S321 76 350 84 S390 66 414 77 S457 44 480 57 S510 38 535 46 S579 25 600 35 S625 14 650 20"
+                />
+                <circle class="chart-dot" cx="650" cy="20" r="5" />
+              </svg>
+            </div>
+            <div class="card goal-card">
+              <div class="section-head">
+                <h2>Your goals</h2>
+                <button class="link-button" data-nav-target="goals">Manage</button>
+              </div>
+              <div class="goal-item">
+                <div class="goal-top">
+                  <b>Home down payment</b><span>$42,000 / $80,000</span>
+                </div>
+                <div class="progress"><div style="width: 52%"></div></div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-top">
+                  <b>Future freedom</b><span>$24,500 / $100,000</span>
+                </div>
+                <div class="progress"><div style="width: 24%"></div></div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-top">
+                  <b>Rainy day fund</b><span>$6,000 / $10,000</span>
+                </div>
+                <div class="progress"><div style="width: 60%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="lower-grid">
+            <div class="card allocation">
+              <div class="section-head">
+                <h2>Portfolio mix</h2>
+                <button class="link-button" data-nav-target="portfolios">Adjust</button>
+              </div>
+              <div class="allocation-layout">
+                <div class="donut"></div>
+                <div class="legend">
+                  <span
+                    ><i class="dot" style="background: #176650"></i> US stocks
+                    <b>56%</b></span
+                  ><span
+                    ><i class="dot" style="background: #b8e66e"></i> Global
+                    stocks <b>22%</b></span
+                  ><span
+                    ><i class="dot" style="background: #ff8b6d"></i> Bonds
+                    <b>13%</b></span
+                  ><span
+                    ><i class="dot" style="background: #a9c5d7"></i> Cash
+                    <b>9%</b></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="card news">
+              <div class="section-head">
+                <h2>For your bookshelf</h2>
+                <button class="link-button" data-nav-target="learn">Explore</button>
+              </div>
+              <div class="article">
+                <div>
+                  <p>What a changing interest rate means for your plan</p>
+                  <small>5 min read · Market notes</small>
+                </div>
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+              <div class="article">
+                <div>
+                  <p>The quiet power of staying invested</p>
+                  <small>4 min read · Principles</small>
+                </div>
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+            </div>
+            <div class="card">
+              <div class="section-head">
+                <h2>Automatic investing</h2>
+                <span class="positive">Active</span>
+              </div>
+              <p style="color: var(--muted); line-height: 1.6; font-size: 12px">
+                Your portfolio is on track. We invest your scheduled deposit and
+                rebalance when needed.
+              </p>
+              <button class="link-button" data-nav-target="automations" style="padding: 18px 0 0">
+                View automation <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="portfolios">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">The right amount of risk</div>
+              <h1>Investment portfolios</h1>
+              <p>
+                Choose a strategy that matches your time horizon. You can change
+                it whenever your life changes.
+              </p>
+            </div>
+            <button class="card-action open-modal">+ Add money</button>
+          </div>
+          <div class="portfolio-list">
+            <article class="portfolio-option">
+              <div class="portfolio-icon conservative">◎</div>
+              <div>
+                <h2>Conservative</h2>
+                <p>
+                  More stability, less turbulence. Designed for near-term goals.
+                </p>
+                <span>Expected return 4.8% · Risk 2 / 5</span>
+              </div>
+              <button class="outline-button">Current plan</button>
+            </article>
+            <article class="portfolio-option selected-portfolio">
+              <div class="portfolio-icon balanced">◒</div>
+              <div>
+                <h2>Balanced</h2>
+                <p>A steady mix of growth and resilience for the long view.</p>
+                <span>Expected return 7.2% · Risk 3 / 5</span>
+              </div>
+              <button class="card-action">Selected</button>
+            </article>
+            <article class="portfolio-option">
+              <div class="portfolio-icon growth">◈</div>
+              <div>
+                <h2>Growth</h2>
+                <p>
+                  More exposure to equities for goals ten years or more away.
+                </p>
+                <span>Expected return 9.4% · Risk 4 / 5</span>
+              </div>
+              <button class="outline-button">Explore</button>
+            </article>
+            <article class="portfolio-option">
+              <div class="portfolio-icon aggressive">↗</div>
+              <div>
+                <h2>Aggressive</h2>
+                <p>Maximum growth potential for a very long time horizon.</p>
+                <span>Expected return 11.1% · Risk 5 / 5</span>
+              </div>
+              <button class="outline-button">Explore</button>
+            </article>
+          </div>
+          <div class="card trust-note">
+            <i data-lucide="scale"></i>
+            <div>
+              <h3>Designed around you, monitored for you</h3>
+              <p>
+                Our portfolios are diversified across thousands of securities
+                and automatically rebalanced when your allocation drifts.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="goals">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Plans with purpose</div>
+              <h1>Your goals</h1>
+              <p>Small, consistent actions add up to something meaningful.</p>
+            </div>
+            <button class="card-action">+ New goal</button>
+          </div>
+          <div class="goal-overview">
+            <div class="card goal-big">
+              <span>Across all goals</span><strong>$72,500</strong
+              ><em>+18.95% since 2022</em>
+            </div>
+            <div class="card goal-big">
+              <span>Monthly contribution</span><strong>$1,750</strong
+              ><em>On track for your targets</em>
+            </div>
+          </div>
+          <div class="goal-cards">
+            <div class="card goal-detail">
+              <div class="goal-detail-top">
+                <div class="goal-symbol home-symbol">
+                  <i data-lucide="house"></i>
+                </div>
+                <span>52% complete</span>
+              </div>
+              <h2>Home down payment</h2>
+              <p>Target by Dec 2030</p>
+              <div class="progress"><div style="width: 52%"></div></div>
+              <div class="goal-amount">
+                <b>$42,000</b><span>of $80,000</span>
+              </div>
+            </div>
+            <div class="card goal-detail">
+              <div class="goal-detail-top">
+                <div class="goal-symbol future-symbol">
+                  <i data-lucide="sunset"></i>
+                </div>
+                <span>24% complete</span>
+              </div>
+              <h2>Future freedom</h2>
+              <p>Target by Jun 2045</p>
+              <div class="progress">
+                <div style="width: 24%; background: var(--coral)"></div>
+              </div>
+              <div class="goal-amount">
+                <b>$24,500</b><span>of $100,000</span>
+              </div>
+            </div>
+            <div class="card goal-detail">
+              <div class="goal-detail-top">
+                <div class="goal-symbol education-symbol">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+                <span>60% complete</span>
+              </div>
+              <h2>Education fund</h2>
+              <p>Target by Aug 2032</p>
+              <div class="progress">
+                <div style="width: 60%; background: #6b9bc2"></div>
+              </div>
+              <div class="goal-amount">
+                <b>$6,000</b><span>of $10,000</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="automations">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Quietly working in the background</div>
+              <h1>Automated investing</h1>
+              <p>
+                Set it once. We keep your plan moving and your allocation in
+                balance.
+              </p>
+            </div>
+            <button class="card-action">+ Create automation</button>
+          </div>
+          <div class="automation-layout">
+            <div class="card automation-main">
+              <div class="automation-status">
+                <span class="status-dot"></span><b>All systems active</b
+                ><span>Last checked today at 9:42 AM</span>
+              </div>
+              <div class="automation-rule">
+                <div class="rule-icon"><i data-lucide="calendar"></i></div>
+                <div>
+                  <h2>Monthly contribution</h2>
+                  <p>$1,000 from Chase Checking •••• 1842</p>
+                  <small>Next transfer Sep 01, 2026</small>
+                </div>
+                <button class="outline-button">Edit</button>
+              </div>
+              <div class="automation-rule">
+                <div class="rule-icon"><i data-lucide="refresh-cw"></i></div>
+                <div>
+                  <h2>Automatic rebalancing</h2>
+                  <p>When any holding moves more than 5% from target</p>
+                  <small>Last rebalanced Jul 18, 2026</small>
+                </div>
+                <button class="toggle on"><span></span></button>
+              </div>
+            </div>
+            <div class="card automation-side">
+              <div class="eyebrow">This year</div>
+              <strong>$8,000</strong>
+              <p>invested automatically</p>
+              <div class="mini-bars">
+                <i style="height: 45%"></i><i style="height: 72%"></i
+                ><i style="height: 54%"></i><i style="height: 83%"></i
+                ><i style="height: 65%"></i><i style="height: 94%"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="money">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Move money</div>
+              <h1>Fund your future</h1>
+              <p>Contribute, withdraw, and keep an eye on every movement.</p>
+            </div>
+          </div>
+          <div class="money-actions">
+            <button
+              class="card money-action open-modal"
+              data-transaction-type="deposit"
+            >
+              <i data-lucide="arrow-down-to-line"></i>
+              <h2>Deposit</h2>
+              <p>Add money to your portfolio</p>
+              <span>→</span></button
+            ><button
+              class="card money-action open-modal"
+              data-transaction-type="withdrawal"
+            >
+              <i data-lucide="arrow-up-from-line"></i>
+              <h2>Withdraw</h2>
+              <p>Move money to your bank</p>
+              <span>→</span>
+            </button>
+          </div>
+          <div class="card linked-bank">
+            <div>
+              <div class="eyebrow">Linked account</div>
+              <h2>Chase Checking <small>•••• 1842</small></h2>
+              <p>Available balance $14,280.60</p>
+            </div>
+            <button class="outline-button">Manage</button>
+          </div>
+          <div class="card security-line">
+            <i data-lucide="lock-keyhole"></i>
+            <p>
+              Transfers are encrypted and protected with multi-factor
+              authentication.
+            </p>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="activity">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Your money, accounted for</div>
+              <h1>Transaction history</h1>
+              <p>Every deposit, withdrawal, and trade in one place.</p>
+            </div>
+            <button class="outline-button">
+              <i data-lucide="download"></i> Export CSV
+            </button>
+          </div>
+          <div class="card table-card">
+            <div class="table-head">
+              <b>Recent activity</b
+              ><button class="link-button">
+                Filter <i data-lucide="sliders-horizontal"></i>
+              </button>
+            </div>
+            <div id="transactionList">
+              <p class="empty-state">
+                Your deposit and withdrawal requests will appear here.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="learn">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Perspective for the journey</div>
+              <h1>Market insights</h1>
+              <p>Useful context, without the noise.</p>
+            </div>
+          </div>
+          <div class="insight-feature">
+            <div>
+              <span class="insight-tag">Market notes · 6 min read</span>
+              <h2>How to make sense of a noisy market</h2>
+              <p>
+                Volatility is part of investing. Here are three ways to keep a
+                long-term plan in view when the headlines get loud.
+              </p>
+              <button class="light-button">
+                Read the story <span>→</span>
+              </button>
+            </div>
+            <div class="feature-shape">
+              <span>STAY<br />THE<br />COURSE</span>
+            </div>
+          </div>
+          <div class="insight-grid">
+            <article class="card insight-card">
+              <span>Principles · 4 min</span>
+              <h2>The quiet power of staying invested</h2>
+              <button class="link-button">Read more →</button>
+            </article>
+            <article class="card insight-card coral-insight">
+              <span>Planning · 5 min</span>
+              <h2>Three questions to ask before changing your plan</h2>
+              <button class="link-button">Read more →</button>
+            </article>
+            <article class="card insight-card blue-insight">
+              <span>Basics · 7 min</span>
+              <h2>Why diversification does the heavy lifting</h2>
+              <button class="link-button">Read more →</button>
+            </article>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="profile">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Your details</div>
+              <h1>Your profile</h1>
+              <p>Manage your identity and personal referral information.</p>
+            </div>
+          </div>
+          <div class="settings-grid">
+            <div class="card settings-card">
+              <div class="settings-title">
+                <div class="avatar large-avatar" id="profileAvatar">MC</div>
+                <div>
+                  <h2 id="profileName">Min Chen</h2>
+                  <p id="profileEmail">min.chen@example.com</p>
+                </div>
+                <button class="outline-button" id="editProfileButton">
+                  Edit profile
+                </button>
+              </div>
+              <form id="profileForm" hidden>
+                <div class="setting-row" style="display: grid; gap: 8px; padding: 0 0 12px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div class="avatar large-avatar" id="profileAvatarPreview">MC</div>
+                    <label class="outline-button" for="avatarInput" style="cursor: pointer; margin: 0;">
+                      Upload photo
+                    </label>
+                    <input id="avatarInput" type="file" accept="image/*" style="display: none;" />
+                  </div>
+                  <label>
+                    <span>First name</span>
+                    <input id="firstNameInput" type="text" name="firstName" placeholder="First name" required />
+                  </label>
+                  <label>
+                    <span>Last name</span>
+                    <input id="lastNameInput" type="text" name="lastName" placeholder="Last name" required />
+                  </label>
+                  <label>
+                    <span>Email address</span>
+                    <input id="emailInput" type="email" name="email" placeholder="you@example.com" required />
+                  </label>
+                  <label>
+                    <span>Phone number</span>
+                    <input id="phoneInput" type="tel" name="phone" placeholder="+1 555 123 4567" required />
+                  </label>
+                  <label>
+                    <span>Country</span>
+                    <input id="countryInput" type="text" name="country" placeholder="Country" required />
+                  </label>
+                  <label>
+                    <span>Street address</span>
+                    <input id="addressInput" type="text" name="address" placeholder="Street address" required />
+                  </label>
+                  <label>
+                    <span>City</span>
+                    <input id="cityInput" type="text" name="city" placeholder="City" required />
+                  </label>
+                  <label>
+                    <span>Postal code</span>
+                    <input id="postalCodeInput" type="text" name="postalCode" placeholder="Postal code" required />
+                  </label>
+                </div>
+                <div class="profile-form-actions" style="display: flex; gap: 10px; margin-top: 12px;">
+                  <button class="card-action" type="submit">Save changes</button>
+                  <button class="outline-button" type="button" id="cancelEditProfile">Cancel</button>
+                </div>
+              </form>
+              <p id="accountDetailsNotice" class="account-details-notice" hidden>
+                Complete your account details below before adding money.
+              </p>
+              <div class="setting-row">
+                <span>First name</span><b id="profileFirstName">Min</b>
+              </div>
+              <div class="setting-row">
+                <span>Last name</span><b id="profileLastName">Chen</b>
+              </div>
+              <div class="setting-row">
+                <span>Email</span><b id="profileEmailValue">min.chen@example.com</b>
+              </div>
+              <div class="setting-row">
+                <span>Your referral code</span
+                ><b id="profileReferralCode">Not available</b>
+              </div>
+              <button class="outline-button logout-button" id="logoutButton">
+                Log out
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="settings">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Account controls</div>
+              <h1>Settings</h1>
+              <p>Keep your preferences and security options up to date.</p>
+            </div>
+          </div>
+          <div class="settings-grid">
+            <div class="card settings-card">
+              <h2>Preferences</h2>
+              <div class="setting-row">
+                <span>Monthly statement</span
+                ><b class="positive">Email enabled</b
+                ><i data-lucide="chevron-right"></i>
+              </div>
+              <div class="setting-row">
+                <span>Security alerts</span><b class="positive">Enabled</b
+                ><i data-lucide="chevron-right"></i>
+              </div>
+              <div class="setting-row">
+                <span>Two-factor authentication</span
+                ><b class="positive">Protected</b
+                ><i data-lucide="chevron-right"></i>
+              </div>
+            </div>
+            <div class="card trust-card">
+              <i data-lucide="shield-check"></i>
+              <div>
+                <h2>Security & trust</h2>
+                <p>
+                  Your information is encrypted in transit and at rest. We never
+                  sell your personal data. Securities are held by a regulated
+                  custodian and eligible accounts receive SIPC protection.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content view-panel" data-panel="fees">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">Clear by design</div>
+              <h1>Simple, transparent fees</h1>
+              <p>No surprises. See exactly what you pay and what you get.</p>
+            </div>
+          </div>
+          <div class="fee-hero card">
+            <div>
+              <span class="eyebrow">Annual advisory fee</span
+              ><strong>0.25%</strong>
+              <p>
+                For a portfolio managed with tax-aware, automated investing.
+              </p>
+            </div>
+            <div class="fee-example">
+              <span>On a $50,000 balance</span
+              ><b>$10.42 <small>/ month</small></b
+              ><em>Everything included</em>
+            </div>
+          </div>
+          <div class="fee-grid">
+            <div class="card">
+              <i data-lucide="wand-sparkles"></i>
+              <h2>Automated management</h2>
+              <p>
+                Portfolio construction, monitoring, and rebalancing included.
+              </p>
+            </div>
+            <div class="card">
+              <i data-lucide="receipt-text"></i>
+              <h2>No account minimums</h2>
+              <p>
+                Start with what works for you. There is no minimum balance to
+                open.
+              </p>
+            </div>
+            <div class="card">
+              <i data-lucide="eye"></i>
+              <h2>Always visible</h2>
+              <p>
+                See your fee estimate clearly in your dashboard every quarter.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="moneyModal">
+      <div class="modal">
+        <button class="close" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="eyebrow">Move money</div>
+        <h2 id="moneyModalTitle">Add money to your portfolio</h2>
+        <p id="moneyModalText">
+          Choose an amount to make a one-time contribution. Your request will be
+          reviewed and tracked in Activity.
+        </p>
+        <div id="depositAmountStep">
+          <div class="modal-row" style="display: grid; gap: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 150px; gap: 10px;">
+              <input
+                id="moneyAmount"
+                type="number"
+                min="1"
+                step="0.01"
+                value="1000"
+                aria-label="Amount"
+              />
+              <select id="currencySelect" aria-label="Currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="NGN">NGN</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="JPY">JPY</option>
+                <option value="CHF">CHF</option>
+                <option value="AED">AED</option>
+              </select>
+            </div>
+            <button class="card-action" id="confirmDeposit">
+              Continue to payment
+            </button>
+          </div>
+        </div>
+        <div id="paymentStep" class="payment-step">
+          <div class="payment-methods" role="radiogroup" aria-label="Payment method">
+            <button class="payment-method selected" type="button" data-payment-method="card" role="radio" aria-checked="true"><i data-lucide="credit-card"></i><span>Card</span></button>
+            <button class="payment-method" type="button" data-payment-method="bank" role="radio" aria-checked="false"><i data-lucide="landmark"></i><span>Bank transfer</span></button>
+            <button class="payment-method" type="button" data-payment-method="ussd" role="radio" aria-checked="false"><i data-lucide="smartphone"></i><span>USSD</span></button>
+          </div>
+          <div id="cardDetails" class="card-details">
+            <label>
+              <span>Cardholder name</span>
+              <input id="cardholderName" type="text" autocomplete="cc-name" placeholder="Name on card" />
+            </label>
+            <label>
+              <span>Card number</span>
+              <input id="cardNumber" type="text" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="1234 5678 9012 3456" />
+            </label>
+            <div class="card-details-row">
+              <label>
+                <span>Expiry</span>
+                <input id="cardExpiry" type="text" inputmode="numeric" autocomplete="cc-exp" maxlength="5" placeholder="MM/YY" />
+              </label>
+              <label>
+                <span>CVV</span>
+                <input id="cardCvv" type="password" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="123" />
+              </label>
+            </div>
+          </div>
+          <div class="gateway-summary"><span>Amount to pay</span><strong id="gatewayAmount">$0.00</strong></div>
+          <button class="card-action" id="confirmPayment" type="button">Pay securely</button>
+          <button class="link-button" id="backToAmount" type="button">Back to amount</button>
+        </div>
+        <div id="paymentSuccess" class="payment-success">
+          <div class="success-icon">✓</div>
+          <h2>Payment Successful</h2>
+          <p><strong id="successAmount">₦0.00</strong> has been received.</p>
+          <small>Transaction ID: <b id="successTransactionId">SI-XXXXXXXX</b></small>
+          <button class="card-action" id="closeSuccess" type="button">Done</button>
+        </div>
+        <p class="auth-status" id="moneyStatus" role="alert"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
