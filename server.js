@@ -458,17 +458,15 @@ async function handleApi(request, response) {
 const server = http.createServer((request, response) => {
     if (request.url.startsWith('/api/')) return handleApi(request, response);
     const requestedPath = new URL(request.url, `http://${request.headers.host}`).pathname;
-    const filePath = path.normalize(path.join(root, requestedPath === '/' ? 'index.html' : requestedPath));
-    if (!filePath.startsWith(root) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+    const publicFiles = { '/': 'index.html', '/index.html': 'index.html', '/style.css': 'style.css', '/script.js': 'script.js' };
+    const publicFile = publicFiles[requestedPath];
+    if (!publicFile) {
         response.writeHead(404); return response.end('Not found');
     }
+    const filePath = path.join(root, publicFile);
+    if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) { response.writeHead(404); return response.end('Not found'); }
     response.writeHead(200, { 'Content-Type': staticTypes[path.extname(filePath)] || 'application/octet-stream' });
     fs.createReadStream(filePath).pipe(response);
 });
 
 server.listen(port, () => console.log(`Shanghai Investment running at http://localhost:${port}`));
-const PORT = process.env.PORT || 3000;
-
-server.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
