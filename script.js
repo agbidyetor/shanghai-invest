@@ -20,7 +20,7 @@ const formatCurrency = (amount, currency = "USD") => {
     maximumFractionDigits: 2,
   }).format(Number(amount || 0));
 };
-const apiBase = window.location.port === "3000" ? "" : "http://localhost:3000";
+const apiBase = "";
 const apiFetch = (url, options = {}) => fetch(`${apiBase}${url}`, { ...options, credentials: "include" });
 let currentUser = null;
 
@@ -180,7 +180,7 @@ document
       const contentType = response.headers.get("content-type") || "";
       if (!contentType.includes("application/json"))
         throw new Error(
-          "Account access requires the app server. Open http://localhost:3000 after running node server.js.",
+          "The account service returned an unexpected response. Refresh the page and try again.",
         );
       const result = await response.json();
       if (!response.ok)
@@ -214,7 +214,7 @@ document
     } catch (error) {
       status.textContent =
         error.message === "Failed to fetch"
-          ? 'Start the app with "node server.js", then open http://localhost:3000.'
+          ? "Unable to reach the account service. Check your connection and try again."
           : error.message;
     } finally {
       submit.disabled = false;
